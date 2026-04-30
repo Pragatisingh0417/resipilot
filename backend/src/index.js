@@ -7,7 +7,7 @@ const path = require("path");
 const app = express();
 app.use(cors({
   origin: [
-    "http://localhost:3000",
+    
     "https://resipilot.vercel.app/login"
   ],
   credentials: true
