@@ -5,11 +5,19 @@ const cors = require('cors');
 const path = require("path");
 
 const app = express();
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://resipilot.vercel.app"
+];
+
 app.use(cors({
-  origin: [
-    
-    "https://resipilot.vercel.app/login"
-  ],
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true
 }));
 
