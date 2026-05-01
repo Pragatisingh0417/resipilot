@@ -24,7 +24,9 @@ export default function GroupHomeSidebar() {
   const navItems = [
     { label: "Dashboard", icon: LayoutDashboard, path: base },
     { label: "Group Homes", icon: Briefcase, path: `${base}/group-homes` },
-
+ { label: "Children", icon: Users, path: `${base}/children` },
+    { label: "Foster Families", icon: Home, path: `${base}/foster-families` },
+    { label: "Guardian Portal", icon: Home, path: `${base}/guardian-portal` },
       // 🔹 Operations
     { label: "Documents", icon: FileText, path: `${base}/documents` },
     { label: "AI Assistant", icon: Bot, path: `${base}/ai-assistant` },
